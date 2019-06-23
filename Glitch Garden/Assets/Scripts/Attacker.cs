@@ -6,6 +6,10 @@ public class Attacker : MonoBehaviour
 {
     [Header("Movement")]
     float currentSpeed = 0f;
+
+    [Header("Effects")]
+    [SerializeField] GameObject deathVFX = default;
+    [SerializeField] float deathVFXTime = 1f;
     
 
     void Update()
@@ -16,5 +20,11 @@ public class Attacker : MonoBehaviour
     public void SetMovementSpeed(float speed)
     {
         currentSpeed = speed;
+    }
+
+    public void DeathVFX()
+    {
+        GameObject VFX = Instantiate(deathVFX, transform.position, Quaternion.identity) as GameObject;
+        Destroy(VFX, deathVFXTime);
     }
 }
