@@ -7,8 +7,8 @@ public class AttackerSpawner : MonoBehaviour
 {
     bool spawn = true;
 
-    [SerializeField] float spawnTimerMin, spawnTimerMax;
-    [SerializeField] Attacker attackerPrefab;
+    [SerializeField] float spawnTimerMin = default, spawnTimerMax = default;
+    [SerializeField] Attacker attackerPrefab = default;
     
     // Start is called before the first frame update
     IEnumerator Start()

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6606969864236063742}
   - component: {fileID: 6606969864236063736}
   - component: {fileID: 6606969864236063737}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Image - BG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -85,7 +85,7 @@ GameObject:
   - component: {fileID: 6606969864287778675}
   - component: {fileID: 6606969864287778685}
   - component: {fileID: 6606969864287778674}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Image - Tree Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -159,7 +159,7 @@ GameObject:
   - component: {fileID: 6606969864629058333}
   - component: {fileID: 6606969864629058335}
   - component: {fileID: 6606969864629058332}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Image - Tree Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -234,7 +234,7 @@ GameObject:
   - component: {fileID: 6606969864849754886}
   - component: {fileID: 6606969864849754887}
   - component: {fileID: 6606969864849754884}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Button - Quit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -358,7 +358,7 @@ GameObject:
   - component: {fileID: 6606969864881316887}
   - component: {fileID: 6606969864881316881}
   - component: {fileID: 6606969864881316886}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Image - Safe Zone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -433,7 +433,7 @@ GameObject:
   - component: {fileID: 6606969865249997171}
   - component: {fileID: 6606969865249997168}
   - component: {fileID: 6606969865249997169}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -537,7 +537,7 @@ GameObject:
   - component: {fileID: 6606969865396370669}
   - component: {fileID: 6606969865396370658}
   - component: {fileID: 6606969865396370668}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Button - Start
   m_TagString: Untagged
   m_Icon: {fileID: 0}

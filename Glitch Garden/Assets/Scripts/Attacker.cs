@@ -24,6 +24,7 @@ public class Attacker : MonoBehaviour
 
     public void DeathVFX()
     {
+        if (!deathVFX) { return; }
         GameObject VFX = Instantiate(deathVFX, transform.position, Quaternion.identity) as GameObject;
         Destroy(VFX, deathVFXTime);
     }

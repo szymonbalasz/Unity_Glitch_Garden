@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Shooter : MonoBehaviour
 {
-    [SerializeField] GameObject projectile, gun;
+    [SerializeField] GameObject projectile = default, gun = default;
 
     public void Fire()
     {
