@@ -158,6 +158,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   starCost: 100
+  starGeneration: 0
 --- !u!95 &6607244876956194588
 Animator:
   serializedVersion: 3
@@ -189,6 +190,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9a7eef9caa4b1146a6a50ac2b9a9fe1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile: {fileID: 1379580138830150409, guid: 9ed2c803debe488429e867c7c598c059,
+  projectile: {fileID: 7921387926283965548, guid: 9ed2c803debe488429e867c7c598c059,
     type: 3}
   gun: {fileID: 6607244876133221467}
