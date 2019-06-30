@@ -15,7 +15,7 @@ public class LevelLoader : MonoBehaviour
     private IEnumerator LoadStartScreen()
     {
         yield return new WaitForSeconds(LoadSceneDelay);
-        LoadNextScene();
+        LoadMainMenu();
     }
 
     public void LoadNextScene()
@@ -33,6 +33,11 @@ public class LevelLoader : MonoBehaviour
     {
         Time.timeScale = 1;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void LoadOptions()
+    {
+        SceneManager.LoadScene("Options Screen");
     }
 
     public void QuitGame()
