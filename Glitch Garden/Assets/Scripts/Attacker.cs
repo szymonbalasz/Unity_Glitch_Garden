@@ -10,9 +10,19 @@ public class Attacker : MonoBehaviour
     [Header("Effects")]
     [SerializeField] GameObject deathVFX = default;
     [SerializeField] float deathVFXTime = 1f;
+
+    [Header("Attack")]
+    GameObject currentTarget = default;
+    [SerializeField] float damage = 100f;
     
 
     void Update()
+    {
+        MoveLeft();
+        UpdateAnimationState();
+    }
+
+    private void MoveLeft()
     {
         transform.Translate(Vector2.left * Time.deltaTime * currentSpeed);
     }
@@ -27,5 +37,29 @@ public class Attacker : MonoBehaviour
         if (!deathVFX) { return; }
         GameObject VFX = Instantiate(deathVFX, transform.position, Quaternion.identity) as GameObject;
         Destroy(VFX, deathVFXTime);
+    }
+
+    public void Attack(GameObject target)
+    {
+        currentTarget = target;
+        GetComponent<Animator>().SetBool("isAttacking", true);
+    }
+
+    public void DamageTarget()
+    {
+        if (!currentTarget) { return; }
+        Health health = currentTarget.GetComponent<Health>();
+        if (health)
+        {
+            health.DealDamage(damage);
+        }
+    }
+
+    void UpdateAnimationState()
+    {
+        if (!currentTarget)
+        {
+            GetComponent<Animator>().SetBool("isAttacking", false);
+        }
     }
 }

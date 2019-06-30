@@ -7,22 +7,24 @@ public class Shooter : MonoBehaviour
     [SerializeField] Projectile projectile = default;
     [SerializeField] GameObject gun = default;
 
+    Animator animator;
     AttackerSpawner myLaneSpawner = default;
 
     private void Start()
     {
         SetLaneSpawner();
+        animator = GetComponent<Animator>();
     }
 
     private void Update()
     {
         if (IsAttackerInLane())
         {
-            
+            animator.SetBool("isAttacking", true);
         }
         else
         {
-            
+            animator.SetBool("isAttacking", false);
         }
     }
 

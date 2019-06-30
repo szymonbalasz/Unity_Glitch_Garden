@@ -4,17 +4,28 @@ using UnityEngine;
 
 public class Defender : MonoBehaviour
 {
+    [Header("Stats")]
     [SerializeField] int starCost = 100;
     [SerializeField] int starGeneration = 0;
+
+    [Header("VFX")]
+    [SerializeField] GameObject deathVFX = default;
+    [SerializeField] float deathVFXTime = 1f;
 
     public void AddStars()
     {
         FindObjectOfType<StarDisplay>().AddStars(starGeneration);
-        Debug.Log("stars added");
     }
 
     public int GetStarCost()
     {
         return starCost;
+    }
+
+    public void DeathVFX()
+    {
+        if (!deathVFX) { return; }
+        GameObject VFX = Instantiate(deathVFX, transform.position, Quaternion.identity) as GameObject;
+        Destroy(VFX, deathVFXTime);
     }
 }

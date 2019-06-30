@@ -7,16 +7,9 @@ public class LevelLoader : MonoBehaviour
 {
     [SerializeField] float LoadSceneDelay = 4f;
     
-    // Start is called before the first frame update
     void Start()
     {
         if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Splash Screen")) { StartCoroutine(LoadStartScreen()); }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     private IEnumerator LoadStartScreen()
@@ -33,5 +26,10 @@ public class LevelLoader : MonoBehaviour
     public void QuitGame()
     {
         Application.Quit();
+    }
+
+    public void LoadLoseScreen()
+    {
+        SceneManager.LoadScene("Lose Screen");
     }
 }
