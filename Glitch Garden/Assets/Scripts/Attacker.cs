@@ -14,7 +14,17 @@ public class Attacker : MonoBehaviour
     [Header("Attack")]
     GameObject currentTarget = default;
     [SerializeField] float damage = 100f;
-    
+
+
+    private void Awake()
+    {
+        FindObjectOfType<LevelController>().AttackerSpawned();
+    }
+
+    private void OnDestroy()
+    {
+        FindObjectOfType<LevelController>().AttackerDestroyed();
+    }
 
     void Update()
     {

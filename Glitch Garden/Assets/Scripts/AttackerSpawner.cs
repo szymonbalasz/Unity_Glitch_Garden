@@ -10,7 +10,6 @@ public class AttackerSpawner : MonoBehaviour
     [SerializeField] float spawnTimerMin = default, spawnTimerMax = default;
     [SerializeField] Attacker[] attackerArray = default;
     
-    // Start is called before the first frame update
     IEnumerator Start()
     {
         while (spawn)
@@ -31,9 +30,8 @@ public class AttackerSpawner : MonoBehaviour
         newAttacker.transform.parent = transform;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void StopSpawning()
     {
-        
+        spawn = false;
     }
 }
