@@ -277,7 +277,7 @@ GameObject:
   m_Component:
   - component: {fileID: 483126569}
   m_Layer: 0
-  m_Name: Starting Defenders
+  m_Name: Defenders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

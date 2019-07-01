@@ -10,10 +10,23 @@ public class Shooter : MonoBehaviour
     Animator animator;
     AttackerSpawner myLaneSpawner = default;
 
+    const string PROJECTILE_PARENT_NAME = "Projectiles";
+    GameObject projectileParent;
+
     private void Start()
     {
         SetLaneSpawner();
         animator = GetComponent<Animator>();
+        CreateProjectileParent();
+    }
+
+    private void CreateProjectileParent()
+    {
+        projectileParent = GameObject.Find(PROJECTILE_PARENT_NAME);
+        if (!projectileParent)
+        {
+            projectileParent = new GameObject(PROJECTILE_PARENT_NAME);
+        }
     }
 
     private void Update()

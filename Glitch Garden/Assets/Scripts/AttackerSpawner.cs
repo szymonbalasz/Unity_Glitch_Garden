@@ -6,11 +6,25 @@ using UnityEngine;
 public class AttackerSpawner : MonoBehaviour
 {
     bool spawn = true;
+    [SerializeField] float spawnDelay = 5f;
 
     [SerializeField] float spawnTimerMin = default, spawnTimerMax = default;
     [SerializeField] Attacker[] attackerArray = default;
     
-    IEnumerator Start()
+    void Start()
+    {
+        spawnTimerMin = spawnTimerMin / PlayerPrefsController.GetDifficulty();
+        spawnTimerMax = spawnTimerMax / PlayerPrefsController.GetDifficulty();
+
+        Invoke("DelayAndStart", spawnDelay);
+    }
+
+    private void DelayAndStart()
+    {
+        StartCoroutine(StartSpawning());
+    }
+
+    IEnumerator StartSpawning()
     {
         while (spawn)
         {
