@@ -1,10 +1,30 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DefenderButton : MonoBehaviour
 {
     [SerializeField] Defender defenderPrefab = default;
+
+    private void Start()
+    {
+        LabelCosts();
+    }
+
+    private void LabelCosts()
+    {
+        Text costText = GetComponentInChildren<Text>();
+        if (!costText)
+        {
+            Debug.LogError("No cost text for defender button");
+        }
+        else
+        {
+            costText.text = defenderPrefab.GetStarCost().ToString();
+        }
+    }
 
     private void OnMouseDown()
     {
