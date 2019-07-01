@@ -12,6 +12,7 @@ public class StarDisplay : MonoBehaviour
     void Start()
     {
         starText = GetComponent<Text>();
+        stars = stars * (int) PlayerPrefsController.GetDifficulty();
         UpdateStars();
     }
 

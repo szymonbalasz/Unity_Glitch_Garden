@@ -44,7 +44,7 @@ public class Shooter : MonoBehaviour
     public void Fire()
     {
         Projectile newProjectile = Instantiate(projectile, gun.transform.position, Quaternion.identity) as Projectile;
-        newProjectile.transform.parent = transform;
+        newProjectile.transform.parent = projectileParent.transform;
     }
 
     private void SetLaneSpawner()

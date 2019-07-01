@@ -12,12 +12,6 @@ public class Defender : MonoBehaviour
     [SerializeField] GameObject deathVFX = default;
     [SerializeField] float deathVFXTime = 1f;
 
-
-    private void Start()
-    {
-        starGeneration = starGeneration / (int) PlayerPrefsController.GetDifficulty();
-    }
-
     public void AddStars()
     {
         FindObjectOfType<StarDisplay>().AddStars(starGeneration);
